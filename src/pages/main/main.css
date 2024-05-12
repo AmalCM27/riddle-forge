@@ -7,10 +7,11 @@ main {
   bottom: 0;
   padding: 30px;
   border: 8px solid var(--bgColor);
-  box-shadow: -5px 5px 15px rgba(255, 255, 255, 0.15),
-    -5px -5px 15px rgba(0, 0, 0, 0.35),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.15),
-    inset -5px 15px rgba(0, 0, 0, 0.35);
+    box-shadow: -5px 5px 15px rgba(255, 255, 255, 0.15),
+      -5px -5px 15px rgba(0, 0, 0, 0.35),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.15),
+      inset -5px 5px 45px rgba(0, 0, 0, 0.35),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.15);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,3 +19,4 @@ main {
   overflow: hidden;
   transition: 0.5s;
 }
+

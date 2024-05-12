@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './sideMenu.css'
-import navListData from '../../data/NavListDaat'
+import navListData from '../../data/NavListData'
 import NavList from '../NavListItem/NavListItem'
 
 
@@ -9,16 +9,40 @@ function SideMenu() {
   return (
     <div className='sideMenu'>
       <a href="#" className="logo">
-        <i class="bi bi-controller"></i>
+        <i className="bi bi-controller"></i>
         <span className="brand">Play</span>
       </a>
       <ul className="nav">
 
         {navData.map(item => (
-          <NavList key={item._id} item={item}/>
+          <NavList key={item._id} item={item} />
         ))}
 
       </ul>
+
+      <ul className="social">
+        <li>
+          <a href="#">
+            <i className="bi bi-meta"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i className="bi bi-twitter-x"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i className="bi bi-youtube"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" className="share">
+            <i className="bi bi-share"></i>
+          </a>
+        </li>
+      </ul>
+
     </div>
   )
 }
