@@ -51,7 +51,42 @@
 }
 
 .sideMenu .nav li a:hover,
-.sideMenu .nav li a:active{
-box-shadow: -5px -5px 15px rgba(255, 225, 255, 0.1),
-5px 5px 15px rgba(0, 0, 0, 0.35);
+.sideMenu .nav li a:active {
+  box-shadow: -5px -5px 15px rgba(255, 225, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.sideMenu .social {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+  transition: 0.5s;
+  left: 47px;
+}
+
+.sideMenu .social li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5em;
+  transition: 0.3s;
+}
+
+.sideMenu .social li a:hover {
+  color: var(--second);
+}
+
+.sideMenu .social  li .share:hover{
+  background: var(--primary);
+}
+
+.sideMenu .social li .share{
+  background: var(--second);
+  padding: 10px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: 0.3s;
 }

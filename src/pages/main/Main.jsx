@@ -6,6 +6,9 @@ function Main() {
   return (
     <main>
       <SideMenu />
+      <div className="banner">
+        
+      </div>
     </main>
   );
 }
