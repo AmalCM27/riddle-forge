@@ -4,10 +4,10 @@ import navListData from '../../data/NavListData'
 import NavList from '../NavListItem/NavListItem'
 
 
-function SideMenu() {
+function SideMenu({active}) {
   const [navData, setNav] = useState(navListData)
   return (
-    <div className='sideMenu'>
+    <div className={`sideMenu ${active ? 'active' : undefined}`}>
       <a href="#" className="logo">
         <i className="bi bi-controller"></i>
         <span className="brand">Play</span>

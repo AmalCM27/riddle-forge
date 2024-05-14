@@ -2,10 +2,10 @@ import React from 'react'
 import './header.css'
 import userImg from '../../images/avatar.jpg'
 
-function Header() {
+function Header({toggelActive}) {
   return (
     <header>
-      <a href="#" className="menu">
+      <a href="#" className="menu" onClick={toggelActive}>
         <i className="bi bi-sliders"></i>
       </a>
       <div className="userItems">

@@ -90,3 +90,11 @@
   border-radius: 50%;
   transition: 0.3s;
 }
+
+.sideMenu.active{
+  width: 7%;
+  transition: 1s;
+  overflow: hidden;
+  align-items: center;
+}
+
