@@ -5,13 +5,13 @@ import NavList from '../NavListItem/NavListItem'
 
 
 function SideMenu({active}) {
-  const [navData, setNav] = useState(navListData)
+  const [navData ] = useState(navListData)
   return (
     <div className={`sideMenu ${active ? 'active' : undefined}`}>
-      <a href="#" className="logo">
+      <Link to="#" className="logo">
         <i className="bi bi-controller"></i>
         <span className="brand">Play</span>
-      </a>
+      </Link>
       <ul className="nav">
 
         {navData.map(item => (
@@ -22,24 +22,24 @@ function SideMenu({active}) {
 
       <ul className="social">
         <li>
-          <a href="#">
+          <Link to="#">
             <i className="bi bi-meta"></i>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">
+          <Link to="#">
             <i className="bi bi-twitter-x"></i>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">
+          <Link to="#">
             <i className="bi bi-youtube"></i>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="share">
+          <Link to="#" className="share">
             <i className="bi bi-share"></i>
-          </a>
+          </Link>
         </li>
       </ul>
 

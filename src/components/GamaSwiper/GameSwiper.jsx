@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './gameSwiper.css'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,6 +10,13 @@ import 'swiper/css/navigation';
 import { EffectCoverflow, Navigation, Autoplay } from 'swiper/modules';
 
 function GameSwiper({ games }) {
+
+  const [active, setActive] = useState(false);
+
+  const handleToggleVideo  = () => {
+    setActive(!active);
+  }
+
   return (
     <Swiper
       effect={'coverflow'}
@@ -17,7 +24,7 @@ function GameSwiper({ games }) {
       navigation={true}
       loop={true}
       centeredSlides={true}
-      slidesPerView={'auto'}  
+      slidesPerView={'auto'}
       coverflowEffect={{
         rotate: 35,
         stretch: 200,
@@ -25,18 +32,40 @@ function GameSwiper({ games }) {
         modifier: 1,
         slideShadows: true,
       }}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
+      // autoplay={{
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // }}
       modules={[EffectCoverflow, Navigation, Autoplay]}
       className='gameSwiper'
     >
 
-      {
-        games.map(game => (
+      {games.map(game => (
           <SwiperSlide key={game._id}>
-            <h4>{game.title}</h4>
+            <div className="gameSlider">
+              <img src={game.img} alt="Game Image" />
+              <div className="content">
+                <h2>{game.title}</h2>
+                <p>{game.description}</p>
+                <div className="buttons">
+                  <a href="#" className="orderBtn">
+                    Order Now
+                  </a>
+                  <a
+                    href="#"
+                    className={`playBtn ${active ? 'active' : undefined}`}
+                    onClick={handleToggleVideo}
+                  >
+                    <span className="Pause">
+                      <i className="bi bi-pause-fill"></i>
+                    </span>
+                    <span className="paly">
+                      <i class="bi bi-play-fill"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </SwiperSlide>
         ))
       }

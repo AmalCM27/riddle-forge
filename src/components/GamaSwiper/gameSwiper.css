@@ -1,0 +1,41 @@
+.swiper {
+  width: 60%;
+  padding-bottom: 30px;
+}
+
+.swiper-slide {
+  width: 599  50px;
+  height: 350px;
+}
+
+.gameSlider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.gameSlider::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 30px !important;
+}
+
+.swiper-slide img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+  border-radius: 30px !important;
+}
