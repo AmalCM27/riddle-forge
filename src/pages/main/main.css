@@ -1,5 +1,4 @@
 main {
-  background: var(--bgColor);
   position: absolute;
   top: 0;
   left: 0;
@@ -7,11 +6,11 @@ main {
   bottom: 0;
   padding: 30px;
   border: 8px solid var(--bgColor);
-  box-shadow: -5px 5px 15px rgba(255, 255, 255, 0.15),
-    -5px -5px 15px rgba(0, 0, 0, 0.35),
+  background: var(--bgColor);
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.15),
+    5px 5px 15px rgba(0, 0, 0, 0.35),
     inset -5px -5px 15px rgba(255, 255, 255, 0.15),
-    inset -5px 5px 45px rgba(0, 0, 0, 0.35),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.15);
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,13 +31,13 @@ main {
   transition: 1s;
 }
 
-.banner.active{
+.banner.active {
   position: relative;
   width: 93%;
   transition: 1s;
 }
 
-section{
+section {
   overflow: hidden;
   position: absolute;
   width: 100%;
@@ -51,11 +50,11 @@ section{
   z-index: 1000;
 }
 
-section::-webkit-scrollbar{
+section::-webkit-scrollbar {
   display: none;
 }
 
-section.active{
+section.active {
   top: 100px;
   height: auto;
   overflow: visible;
