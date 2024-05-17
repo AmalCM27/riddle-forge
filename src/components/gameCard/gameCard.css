@@ -12,9 +12,9 @@
   transition: 0.5s;
 }
 
-.gameCard:hover {
+/* .gameCard:hover {
   box-shadow: 0 0 5px #35332f, 0 0 20px #706f6c, 0 0 30px #f8f8a6;
-}
+} */
 
 .gameCard img {
   border-radius: 20px;

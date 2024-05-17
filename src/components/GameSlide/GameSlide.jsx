@@ -33,7 +33,7 @@ function GameSlide({game, active, toogleVideo}) {
                 <i className="bi bi-pause-fill"></i>
               </span>
               <span className="play">
-                <i class="bi bi-play-fill"></i>
+                <i className="bi bi-play-fill"></i>
               </span>
             </a>
           </div>

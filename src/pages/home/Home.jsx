@@ -3,9 +3,9 @@ import './home.css'
 import GameSwiper from '../../components/GamaSwiper/GameSwiper'
 import GameCard from '../../components/gameCard/GameCard'
 
-function Home({ games }) {
+function Home({ games, reference }) {
   return (
-    <section id="home" className='home active'>
+    <section id="home" className="home active" ref={reference} >
       <div className="container-fluid">
         <div className="row">
           <GameSwiper games={games} />
@@ -15,7 +15,7 @@ function Home({ games }) {
             <h2 className="sectionTitle">Game on promotion</h2>
           </div>
           <div className="col-lg-6 d-flex justify-content-end align-items-center">  
-            <a href="#" className="viewMore">
+            <a href="#!" className="viewMore">
               View More Games <i className="bi bi-arrow-right"></i>
             </a>
           </div>
