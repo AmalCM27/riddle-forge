@@ -15,7 +15,9 @@ function Bag({ games, reference }) {
             <>
             <div className="row">
               <div className="table-responsvie">
-                
+                 <table className="shopbagTable">
+                  
+                 </table>
               </div>
             </div>
             </>
