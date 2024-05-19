@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './header.css'
+import { AppContext } from '../../App'
 import userImg from '../../images/avatar.jpg'
 
-function Header({toggelActive}) {
+function Header({ toggelActive }) {
+
+  const {library, bag} = useContext(AppContext)
+
   return (
     <header>
       <a href="#" className="menu" onClick={toggelActive}>
@@ -11,16 +15,16 @@ function Header({toggelActive}) {
       <div className="userItems">
         <a href="#" className="icon">
           <i className="bi bi-heart-fill"></i>
-          <span className="like">0</span>
+          <span className="like">{library.length}</span>
         </a>
         <a href="#" className="icon">
           <i className="bi bi-bag-fill"></i>
-          <span className="bag">0</span>
+          <span className="bag"> {bag.length} </span>
         </a>
         <div className="avatar">
           <a href="#">
             <img src={userImg} alt="User Image" />
-            </a>
+          </a>
           <div className="user">
             <span>Amal_Cool</span>
             <a href="#">View Profile</a>

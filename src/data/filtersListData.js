@@ -29,6 +29,27 @@ const filtersListData = [
     name: 'Fighting',
     active: false,
   },
+  {
+    _id: 7,
+    name: 'Shooter',
+    active: false,
+  },
+
+  {
+    _id: 8,
+    name: 'Sandbox',
+    active: false,
+  },
+  {
+    _id: 9,
+    name: 'Action-adventure',
+    active: false,
+  },
+  {
+    _id: 10,
+    name: 'Adventure-game',
+    active: false,
+  },
 ];
 
 export default filtersListData;
