@@ -21,10 +21,10 @@ function GameSlide({game, active, toogleVideo}) {
           <h2>{game.title}</h2>
           <p>{game.description}</p>
           <div className="buttons">
-            <a href="javascript:void(0)" className="orderBtn">
+            <button className="orderBtn">
               Order Now
-            </a>
-            <a
+            </button>
+            <button
               href="javascript:void(0)"
               className={`playBtn ${active ? 'active' : undefined}`}
               onClick={toogleVideo}
@@ -35,7 +35,7 @@ function GameSlide({game, active, toogleVideo}) {
               <span className="play">
                 <i className="bi bi-play-fill"></i>
               </span>
-            </a>
+            </button>
           </div>
         </div>
       </div>
