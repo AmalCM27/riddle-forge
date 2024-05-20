@@ -23,7 +23,7 @@ function Header({ toggelActive }) {
         </a>
         <div className="avatar">
           <a href="javascript:void(0)">
-            <img src={userImg} alt={game.title} />
+            <img src={userImg} alt="User Image" />
           </a>
           <div className="user">
             <span>Amal_Cool</span>
