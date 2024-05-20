@@ -6,7 +6,7 @@ function GameSlide({game, active, toogleVideo}) {
   return (
     <SwiperSlide key={game._id}>
       <div className="gameSlider">
-        <img src={game.img} alt="Game Image" />
+        <img src={game.img} alt={game.title} />
         <div className={`video ${active ? 'active' : undefined}`}>
           <iframe
             width="1280"
@@ -21,11 +21,11 @@ function GameSlide({game, active, toogleVideo}) {
           <h2>{game.title}</h2>
           <p>{game.description}</p>
           <div className="buttons">
-            <a href="/#" className="orderBtn">
+            <a href="javascript:void(0)" className="orderBtn">
               Order Now
             </a>
             <a
-              href="#"
+              href="javascript:void(0)"
               className={`playBtn ${active ? 'active' : undefined}`}
               onClick={toogleVideo}
             >
