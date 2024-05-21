@@ -9,7 +9,7 @@ function Header({ toggelActive }) {
 
   return (
     <header>
-      <a  className="menu" onClick={toggelActive}>
+      <a href="/" className="menu" onClick={toggelActive}>
         <i className="bi bi-sliders"></i>
       </a>
       <div className="userItems">

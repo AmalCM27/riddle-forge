@@ -7,7 +7,7 @@ function GameRating({ rating }) {
   const generateStars = () => {
     let stars = [];
     if (rating > 5 || rating < 1) {
-      return;
+      return stars;
     }
     for (let i = 0; i < rating; i++) {
       stars.push(i);
@@ -15,9 +15,10 @@ function GameRating({ rating }) {
     return stars;
   };
 
-  useEffect(()  => {
+  useEffect(() => {
     setStars(generateStars());
-  });
+  }, [rating]);
+
   return (
     <div className='gameRating'>
       {stars.map((star, index) => (
