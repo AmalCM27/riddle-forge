@@ -17,7 +17,7 @@ function GameRating({ rating }) {
 
   useEffect(() => {
     setStars(generateStars());
-  },);
+  });
   return (
     <div className='gameRating'>
       {stars.map((star, index) => (
