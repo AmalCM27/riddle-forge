@@ -6,17 +6,17 @@ function Bag({ games, reference }) {
 
   const [total, setTotal] = useState(0);
 
-  const handelTotalPayment = () => {
-    return games
-     .map(game => game.price * (1 - game.discount))
-     .reduce((acc, currentValue) => acc + currentValue, 0)
-     .toFixed(2); 
-  };
-
   useEffect(() => {
+    const handelTotalPayment = () => {
+      return games
+       .map(game => game.price * (1 - game.discount))
+       .reduce((acc, currentValue) => acc + currentValue, 0)
+       .toFixed(2); 
+    };
+
     const totalPayment = handelTotalPayment();
     setTotal(totalPayment);
-  }, [games, handelTotalPayment]); // Include handelTotalPayment in the dependency array
+  }, [games]); // Include only games in the dependency array
 
   return (
     <section id="bag" className='bag' ref={reference}>

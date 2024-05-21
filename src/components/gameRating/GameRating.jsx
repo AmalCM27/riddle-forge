@@ -16,8 +16,9 @@ function GameRating({ rating }) {
   };
 
   useEffect(() => {
-    setStars(generateStars());
-  }, [rating]);
+    const stars = generateStars(); // Generate stars inside useEffect
+    setStars(stars);
+  }, [rating, generateStars]); // Include generateStars in the dependency array
 
   return (
     <div className='gameRating'>
