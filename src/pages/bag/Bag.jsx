@@ -11,11 +11,12 @@ function Bag({ games, reference }) {
       .map(game => game.price * (1 - game.discount))
       .reduce((acc, currentValue) => acc + currentValue, 0)
       .toFixed(2); 
-    };
+  };
 
   useEffect(() => {
-    setTotal(handelTotalPayment());
-  }, [games]);
+    const totalPayment = handelTotalPayment();
+    setTotal(totalPayment);
+  }, [games, handelTotalPayment]); // Include handelTotalPayment in the dependency array
 
   return (
     <section id="bag" className='bag' ref={reference}>
@@ -31,7 +32,7 @@ function Bag({ games, reference }) {
         ) : (
           <>
             <div className="row">
-              <div className="table-responsvie">
+              <div className="table-responsive">
                 <table className="shopBagTable table table-borderless align-middle">
                   <thead>
                     <tr>
