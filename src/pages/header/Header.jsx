@@ -26,7 +26,7 @@ function Header({ toggelActive }) {
             <img src={userImg} alt="User Image" />
           </a>
           <div className="user">
-            <span>Amal_Cool</span>
+            <span>Amal</span>
             <a href="javascript:void(0)">View Profile</a>
           </div>
         </div>

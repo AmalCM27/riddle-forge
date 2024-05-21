@@ -71,7 +71,7 @@
 
 .gameSlider .content p {
   color: #ebebeb;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .gameSlider .content .buttons {
@@ -90,12 +90,17 @@
   padding: 8px 20px;
   background: var(--second);
   border-radius: 10px;
+  transition: 0.3s;
+}
+
+.gameSlider .content .buttons .orderBtn:hover{
+  background: black;
 }
 
 .gameSlider .content .buttons .playBtn {
   height: 50px;
   width: 50px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(16, 11, 11, 0.2);
   backdrop-filter: blur(20px);
   border-radius: 50%;
   display: flex;
@@ -103,6 +108,7 @@
   align-items: center;
   font-size: 2.5rem;
 }
+ 
 
 .playBtn .play {
   display: block;

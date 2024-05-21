@@ -1,6 +1,8 @@
 import React from 'react'
 import {SwiperSlide } from 'swiper/react';
 
+import './gameSlide.css';
+
 
 function GameSlide({game, active, toogleVideo}) {
   return (
@@ -25,7 +27,7 @@ function GameSlide({game, active, toogleVideo}) {
               Order Now
             </button>
             <button
-              href="javascript:void(0)"
+              href="!#"
               className={`playBtn ${active ? 'active' : undefined}`}
               onClick={toogleVideo}
             >
