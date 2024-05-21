@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'eact'
+import React, { useState, useEffect } from 'react'
 import './bag.css'
 import ShopBagItems from '../../components/shopBagItems/ShopBagItems'
 
