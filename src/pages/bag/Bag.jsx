@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'eact'
 import './bag.css'
 import ShopBagItems from '../../components/shopBagItems/ShopBagItems'
 
@@ -8,9 +8,9 @@ function Bag({ games, reference }) {
 
   const handelTotalPayment = () => {
     return games
-      .map(game => game.price * (1 - game.discount))
-      .reduce((acc, currentValue) => acc + currentValue, 0)
-      .toFixed(2); 
+     .map(game => game.price * (1 - game.discount))
+     .reduce((acc, currentValue) => acc + currentValue, 0)
+     .toFixed(2); 
   };
 
   useEffect(() => {
@@ -27,7 +27,7 @@ function Bag({ games, reference }) {
       </div>
 
       {
-        games.length === 0 ? (
+        games.length === 0? (
           <h2>Your Bag is empty</h2>
         ) : (
           <>
