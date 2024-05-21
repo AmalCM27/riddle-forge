@@ -15,7 +15,7 @@ function GameRating({ rating }) {
     return stars;
   };
 
-  useEffect(() => {
+  useEffect(()  => {
     setStars(generateStars());
   });
   return (
