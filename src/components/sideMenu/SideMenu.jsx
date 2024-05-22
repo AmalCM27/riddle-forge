@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './sideMenu.css'
 import navListData from '../../data/NavListData'
 import NavList from '../NavListItem/NavListItem'
-
+import PlayGame from './controller.gif'
 
 function SideMenu({ active, sectionActive }) {
   const [navData, setNavData] = useState(navListData);
@@ -20,7 +20,7 @@ function SideMenu({ active, sectionActive }) {
   return (
     <div className={`sideMenu ${active ? 'active' : undefined}`}>
       <a href="#!" className="logo">
-        <i className="bi bi-controller"></i>
+        <img src={PlayGame} alt="" />
         <span className="brand">Play</span>
       </a>
       <ul className="nav">

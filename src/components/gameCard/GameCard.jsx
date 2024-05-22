@@ -24,8 +24,7 @@ function GameCard({ game }) {
     <div className="col-xl-3 col-lg-4 col-md-6">
       <div className="gameCard">
         <img src={game.img} alt={game.title} className="img-fluid" />
-        <a
-          href="#!"
+        <button
           className={`like ${library.includes(game) ? 'active' : undefined} `}
           onClick={
             library.includes(game)
@@ -34,7 +33,7 @@ function GameCard({ game }) {
           }
         >
           <i className="bi bi-heart-fill"></i>
-        </a>
+        </button>
         <div className="gameFeature">
           <span className="gameType">{game.level}</span>
           <GameRating rating={game.rating} />

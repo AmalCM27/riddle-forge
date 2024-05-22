@@ -11,10 +11,24 @@ header {
   background: transparent;
 }
 
+
 .menu {
   font-size: 1.8rem;
   color: #fff;
+  transition: 0.3s;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
 }
+
+.bi-sliders::before{
+  margin-top: 10px;
+}
+
+
 
 .userItems {
   display: inline-flex;
@@ -26,6 +40,25 @@ header {
   position: relative;
   color: #fff;
   font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.bi-box-arrow-in-right{
+  margin-left: -7px;
+}
+
+.auth{
+  position: relative;
+  color: #fff;
+  font-size: 2rem;
   width: 50px;
   height: 50px;
   border-radius: 10px;
