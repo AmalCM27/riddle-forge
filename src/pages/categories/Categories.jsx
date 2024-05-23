@@ -61,7 +61,7 @@ function Categories({ games, reference }) {
                 type="text"
                 name="search"
                 value={text}
-                placeholder="Search"
+                placeholder='Search'
                 onChange={handleSearchGames} />
             </div>
           </div>

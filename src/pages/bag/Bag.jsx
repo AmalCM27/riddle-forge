@@ -32,7 +32,7 @@ function Bag({ games, reference }) {
         ) : (
           <>
             <div className="row">
-              <div className="table-responsive">
+              <div className="table-responsiveq">
                 <table className="shopBagTable table table-borderless align-middle">
                   <thead>
                     <tr>

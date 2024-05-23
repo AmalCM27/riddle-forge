@@ -1,15 +1,26 @@
-import React, { useContext } from 'react'
-import './header.css'
-import { AppContext } from '../../App'
-import userImg from '../../images/avatar.jpg'
+// src/components/Header.jsx
+import React, { useContext, useState } from 'react';
+import './header.css';
+import { AppContext } from '../../App';
+import userImg from '../../images/avatar.jpg';
+import AuthModal from '../../components/AuthModal/AuthModal';
+import SignUpModal from '../../components/SignUpModal/SignUpModal';
 
 function Header({ toggelActive }) {
-  const { library, bag } = useContext(AppContext)
+  const { library, bag } = useContext(AppContext);
+  const [isAuthModalOpen, setAuthModalOpen] = useState(false);
+  const [isSignUpModalOpen, setSignUpModalOpen] = useState(false);
+
+  const openAuthModal = () => setAuthModalOpen(true);
+  const closeAuthModal = () => setAuthModalOpen(false);
+
+  const openSignUpModal = () => setSignUpModalOpen(true);
+  const closeSignUpModal = () => setSignUpModalOpen(false);
 
   return (
     <header>
       <a href='!#' className="menu" onClick={toggelActive}>
-        <i className="bi bi-sliders"></i> 
+        <i className="bi bi-sliders"></i>
       </a>
       <div className="userItems">
         <a href="!#" className="icon">
@@ -18,11 +29,11 @@ function Header({ toggelActive }) {
         </a>
         <a href='!#' className="icon">
           <i className="bi bi-bag-fill"></i>
-          <span className="bag"> {bag.length} </span>
+          <span className="bag">{bag.length}</span>
         </a>
-        <a href='!#' className="auth">
-        <i class="bi bi-box-arrow-in-right"></i>
-          <span className="bag"></span>
+ 
+        <a href='!#' className="auth" onClick={openSignUpModal}>
+          <i className="bi bi-box-arrow-in-right"></i>
         </a>
         <div className="avatar">
           <a href='!#'>
@@ -34,8 +45,10 @@ function Header({ toggelActive }) {
           </div>
         </div>
       </div>
+      {isAuthModalOpen && <AuthModal closeModal={closeAuthModal} />}
+      {isSignUpModalOpen && <SignUpModal closeModal={closeSignUpModal} />}
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
