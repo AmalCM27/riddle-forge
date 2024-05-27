@@ -48,13 +48,7 @@ function SideMenu({ active, sectionActive }) {
             <i className="bi bi-instagram"></i>
           </a>
         </li>
-        <li>
-          <a href="#!" className="share">
-            <i className="bi bi-share"></i>
-          </a>
-        </li>
       </ul>
-
     </div>
   )
 }

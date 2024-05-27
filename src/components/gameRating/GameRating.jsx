@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import './gameRating.css'
-
 function GameRating({ rating }) {
   const [stars, setStars] = useState([]);
 

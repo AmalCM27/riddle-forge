@@ -27,6 +27,20 @@ const navListData = [
     icon: 'bi-bag',
     active: false,
   },
+  {
+    _id: 5,
+    target: 'about',
+    name: `About`,
+    icon: 'bi-file-earmark-person',
+    active: false,
+  },
+  {
+    _id: 6,
+    target: 'contact',
+    name: `Contacts`,
+    icon: 'bi-envelope',
+    active: false,
+  },
 ]
 
 export default navListData;

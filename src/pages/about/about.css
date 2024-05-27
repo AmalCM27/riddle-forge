@@ -1,0 +1,16 @@
+  .aboutText {
+    font-size: 1.2rem;
+    text-align: end;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .aboutTitle{
+    text-align: start;
+  }
+
+  .EndText{
+    text-align: center;
+    color: #fff;
+    margin-top:100px;
+  }

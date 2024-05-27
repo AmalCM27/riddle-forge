@@ -7,9 +7,11 @@ import Home from '../home/Home';
 import Categories from '../categories/Categories';
 import MyLibrary from '../myLibrary/MyLibrary';
 import Bag from '../bag/Bag';
+import About from '../about/About';
+import Contacts from '../contacts/Contacts';
 
 function Main() {
-  const { library, bag } = useContext(AppContext)
+  const { library, bag,  contacts, about } = useContext(AppContext)
   const [active, setActive] = useState(false);
   const [games, setGames] = useState([]);
 
@@ -17,6 +19,8 @@ function Main() {
   const categoriesRef = useRef();
   const libraryRef = useRef();
   const bagref = useRef();
+  const contactsRef = useRef();
+  const aboutRef = useRef();
 
   const sections = [
     {
@@ -39,6 +43,8 @@ function Main() {
       ref: bagref,
       active: false,
     },
+    { name: 'about', ref: aboutRef, active: false },
+    { name: 'contacts', ref: contactsRef, active: false },
   ];
 
 
@@ -81,6 +87,8 @@ function Main() {
               <Categories games={games} reference={categoriesRef} />
               <MyLibrary games={library} reference={libraryRef} />
               <Bag games={bag} reference={bagref} />
+              <About games={about} reference={aboutRef} />
+              <Contacts games={contacts} reference={contactsRef} />
             </>
           )}
 
