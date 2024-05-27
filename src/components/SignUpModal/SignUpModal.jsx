@@ -57,7 +57,7 @@ const SignUpModal = ({ closeModal, onSignUp }) => {
                     />
                     <button type="submit">Sign Up</button>
                 </form>
-                <button className="google-signup" onClick={handleGoogleSignUp}>Sign Up with Google</button>
+                <button className="google-signup" type="submit" onClick={handleGoogleSignUp}>Sign Up with Google</button>
             </div>
         </div>
     );
