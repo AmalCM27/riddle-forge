@@ -1,42 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './categories.css';
 import filtersListData from '../../data/filtersListData';
 import GameCard from '../../components/gameCard/GameCard';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 function Categories({ games, reference }) {
-
   const [data, setData] = useState(games);
-
   const [filters, setFilters] = useState(filtersListData);
-  const handleFilterGames = category => {
-    setFilters(
-      filters.map(filter => {
-        filter.active = false;
-        if (filter.name === category) {
-          filter.active = true;
-        }
-        return filter;
-      })
-    );
+  const [text, setText] = useState('');
+  const [showNoResults, setShowNoResults] = useState(false);
 
-    if (category === 'All') {
-      setData(games);
-      return;
-    }
-    setData(games.filter(game => game.category === category));
+  const handleFilterGames = category => {
+    setFilters(filters.map(filter => {
+      filter.active = false;
+      if (filter.name === category) {
+        filter.active = true;
+      }
+      return filter;
+    }));
+
+    const filteredGames = category === 'All' ? games : games.filter(game => game.category === category);
+    setData(filteredGames);
+    setShowNoResults(filteredGames.length === 0);
   };
 
-  const [text, setText] = useState('');
-
-
   const handleSearchGames = e => {
-    setData(
-      games.filter(game =>
-        game.title.toLowerCase().includes(e.target.value.toLowerCase())
-      )
+    const searchText = e.target.value.toLowerCase();
+    const filteredGames = games.filter(game =>
+      game.title.toLowerCase().includes(searchText)
     );
-    setText(e.target.value);
-  }
+    setData(filteredGames);
+    setText(searchText);
+    setShowNoResults(filteredGames.length === 0);
+  };
 
   return (
     <section id="categories" className="categories" ref={reference}>
@@ -62,18 +58,38 @@ function Categories({ games, reference }) {
                 name="search"
                 value={text}
                 placeholder='Search'
-                onChange={handleSearchGames} />
+                onChange={handleSearchGames}
+              />
             </div>
           </div>
         </div>
         <div className="row">
-          {data.map(game => (
-            <GameCard key={game._id} game={(game)} />
-          ))}
+          <TransitionGroup className="game-list" style={{ display: 'flex', flexWrap: 'wrap' }}>
+            {data.map(game => (
+              <CSSTransition key={game._id} classNames="fade" timeout={300}>
+                <GameCard game={game} />
+              </CSSTransition>
+            ))}
+          </TransitionGroup>
+          <CSSTransition
+            in={showNoResults}
+            timeout={1500}
+            classNames={{
+              enter: 'show',
+              enterActive: 'show',
+              exit: 'hide',
+              exitActive: 'hide'
+            }}
+            unmountOnExit
+          >
+            <div className="no-results">
+              No results found
+            </div>
+          </CSSTransition>
         </div>
       </div>
     </section>
   );
 }
 
-export default Categories
+export default Categories;

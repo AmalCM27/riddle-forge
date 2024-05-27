@@ -20,31 +20,31 @@ function Header({ toggelActive }) {
 
     return (
         <header>
-            <a href='!#' className="menu" onClick={toggelActive}>
+           <a href='#' className="menu" onClick={toggelActive}>
                 <i className="bi bi-sliders"></i>
             </a>
             <div className="userItems">
-                <a href="!#" className="icon">
+                <a href="#" className="icon">
                     <i className="bi bi-heart-fill"></i>
                     <span className="like">{library.length}</span>
                 </a>
-                <a href='!#' className="icon">
+                <a href='#' className="icon">
                     <i className="bi bi-bag-fill"></i>
                     <span className="bag">{bag.length}</span>
                 </a>
-                <a href='!#' className="auth" onClick={openAuthModal}>
+                <a href='#' className="auth" onClick={openAuthModal}>
                     <i className="bi bi-box-arrow-in-right"></i>
                 </a>
-                <a href='!#' className="auth" onClick={openSignUpModal}>
+                <a href='#' className="auth" onClick={openSignUpModal}>
                     <i className="bi bi-person-plus"></i>
                 </a>
                 <div className="avatar">
-                    <a href='!#'>
+                    <a href='#'>
                         <img src={userImg} alt="User avatar" />
                     </a>
                     <div className="user">
                         <span>Amal</span>
-                        <a href='!#'>View Profile</a>
+                        <a href='#'>View Profile</a>
                     </div>
                 </div>
             </div>

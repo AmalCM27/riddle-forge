@@ -1,9 +1,9 @@
-import React from 'react'
-import './about.css'
+import React from 'react';
+import './about.css';
 
 function About({ reference }) {
   return (
-    <section id="about" className='about' ref={reference} >
+    <section id="about" className='about' ref={reference}>
       <div className="container-fluid">
         <div className="row mb-3">
           <h1>About</h1>
@@ -34,13 +34,12 @@ function About({ reference }) {
             Each game card on our site features detailed information, including price, rating, and special discounts. Whether you're looking for the best deals or the highest-rated titles, our game cards provide all the details you need to make an informed choice.
           </p>
         </div>
-
       </div>
       <h3 className="EndText">
         Thank you for visiting Riddle-Forge! We hope you enjoy your time here and find the perfect games to add to your collection. Happy gaming!
       </h3>
     </section>
-  )
+  );
 }
 
-export default About
+export default About;

@@ -1,17 +1,39 @@
-  .aboutText {
-    font-size: 1.2rem;
-    text-align: end;
-    width: 90%;
-    margin: 0 auto;
-  }
+.about {
+  text-align: center;
+  /* padding: 50px 20px; */
+}
 
-  .aboutTitle{
-    text-align: start;
-    color: #fff;
-  }
+.aboutText {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
 
-  .EndText{
-    text-align: center;
-    color: #fff;
-    margin-top:100px;
-  }
+.aboutTitle {
+  margin-top: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.EndText {
+  margin-top: 50px;
+  font-size: 22px;
+  color: #fff;
+  font-weight: bold;
+}
+
+ 
+
+.logo img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+ 

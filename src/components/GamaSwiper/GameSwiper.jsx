@@ -13,7 +13,7 @@ import GameSlide from '../GameSlide/GameSlide';
 
 function GameSwiper({ games }) {
 
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(false);  
 
   const handleToggleVideo = () => {
     setActive(!active);
