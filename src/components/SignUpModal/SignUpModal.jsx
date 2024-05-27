@@ -1,20 +1,34 @@
-// src/components/SignUpModal.jsx
 import React, { useState } from 'react';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../firebase';
+import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { auth, googleProvider } from '../../firebase';
 import '../AuthModal/AuthModal.css';
 
-const SignUpModal = ({ closeModal }) => {
+const SignUpModal = ({ closeModal, onSignUp }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
     const handleSignUp = async (e) => {
         e.preventDefault();
+        setError('');
         try {
-            await createUserWithEmailAndPassword(auth, email, password);
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            onSignUp(userCredential.user);
             alert('Registration Successful!');
-            closeModal();
+        } catch (error) {
+            if (error.code === 'auth/email-already-in-use') {
+                setError('This email is already in use. Please use a different email or sign in.');
+            } else {
+                setError(error.message);
+            }
+        }
+    };
+
+    const handleGoogleSignUp = async () => {
+        try {
+            const result = await signInWithPopup(auth, googleProvider);
+            onSignUp(result.user);
+            alert('Registration Successful!');
         } catch (error) {
             setError(error.message);
         }
@@ -43,6 +57,7 @@ const SignUpModal = ({ closeModal }) => {
                     />
                     <button type="submit">Sign Up</button>
                 </form>
+                <button className="google-signup" onClick={handleGoogleSignUp}>Sign Up with Google</button>
             </div>
         </div>
     );

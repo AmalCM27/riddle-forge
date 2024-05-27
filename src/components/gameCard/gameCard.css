@@ -113,12 +113,15 @@
   align-items: center;
   border-radius: 20px 0 20px 0;
   font-size: 1.2rem;
-  transition: 0.3s;
+  transition: 0.1s;
   content: "Buy";
 
 }
 
-.gameCard .addBag:hover,
-.gameCard .addBag::after  {
+.gameCard .addBag:hover  {
   background: var(--primary);
+}
+
+.gameCard .addBag:focus{
+  background: red;
 }
