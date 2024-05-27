@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import './gameRating.css'
+
 function GameRating({ rating }) {
   const [stars, setStars] = useState([]);
 
-  const generateStars = () => {
+  const generateStars = useCallback(() => {
     let stars = [];
     if (rating > 5 || rating < 1) {
       return stars;
@@ -12,10 +13,10 @@ function GameRating({ rating }) {
       stars.push(i);
     }
     return stars;
-  };
+  }, [rating]); // Memoize the function with useCallback, depend on rating
 
   useEffect(() => {
-    const stars = generateStars(); // Generate stars inside useEffect
+    const stars = generateStars();
     setStars(stars);
   }, [rating, generateStars]); // Include generateStars in the dependency array
 
