@@ -52,7 +52,10 @@ function GameCard({ game }) {
             ${((1 - game.discount) * game.price).toFixed(2)}
           </span>
         </div>
-        <button className="addBag" onClick={() => handleAddToBag(game)} >
+        <button
+          className={`addBag ${bag.includes(game) ? 'active' : undefined}`}
+          onClick={() => handleAddToBag(game)}
+        >
           <i className="bi bi-bag-plus-fill"></i>
         </button>
       </div>

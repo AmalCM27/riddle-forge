@@ -28,13 +28,12 @@ main {
   background: var(--bgColor);
   box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.35);
-  transition: 1s;
+  transition: width 1s; /* Анимация только для изменения ширины */
 }
 
+
 .banner.active {
-  position: relative;
-  width: 93%;
-  transition: 1s;
+  width: 93%; /* Изменение ширины при активации */
 }
 
 section {
@@ -45,7 +44,7 @@ section {
   padding: 0 30px 0 30px;
   bottom: 0;
   opacity: 0;
-  transition: ease-in-out 1s;
+  transition: ease-in-out 1s, opacity 1s ; /* Добавлена анимация для scroll-behavior */
   transform-origin: bottom;
   z-index: 1000;
 }
