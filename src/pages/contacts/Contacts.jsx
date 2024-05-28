@@ -10,6 +10,23 @@ function Contacts({reference}) {
       </div>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus natus labore, aut error quo autem sapiente consequuntur quasi sit quidem minus soluta illum veritatis sed unde laborum corrupti nobis adipisci.</p>
     </div>
+    <ul className="social">
+        <li>
+          <a href="#!">
+            <i className="bi bi-telegram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#!">
+            <i className="bi bi-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#!">
+            <i className="bi bi-instagram"></i>
+          </a>
+        </li>
+      </ul>
   </section>
   )
 }

@@ -75,7 +75,7 @@ function Categories({ games, reference }) {
           </div>
         </div>
         <div className="row">
-          <TransitionGroup className="game-list" style={{ display: 'flex', flexWrap: 'wrap' }}>
+          <TransitionGroup className="game-list" style={{ display: 'flex', flexWrap: 'wrap'}}>
             {data.map(game => (
               <CSSTransition key={game._id} classNames="fade" timeout={500}>
                 <GameCard game={game} />

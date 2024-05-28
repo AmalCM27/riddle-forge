@@ -32,23 +32,7 @@ function SideMenu({ active, sectionActive }) {
           />
         ))}
       </ul>
-      <ul className="social">
-        <li>
-          <a href="#!">
-            <i className="bi bi-telegram"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#!">
-            <i className="bi bi-linkedin"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#!">
-            <i className="bi bi-instagram"></i>
-          </a>
-        </li>
-      </ul>
+      
     </div>
   )
 }
