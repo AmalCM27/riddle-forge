@@ -16,9 +16,8 @@
   font-family: 'Bauhaus 93', sans-serif;
   position: relative;
   text-decoration: none;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 15px;
   color: #fff;
   font-size: 3.5em;
   font-weight: 600;
@@ -119,6 +118,15 @@
 } */
  
 .brand{
-  margin-left: -23px;
-  font-size: 4rem;
+  width: 50%;
+  font-size: 34px;
+}
+.logo_in{
+  width: 50%;
+  max-width: 150px;
+}
+.logo_in img{
+  display: block;
+  width: 100%;
+  height: auto;
 }

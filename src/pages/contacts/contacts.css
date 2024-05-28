@@ -1,0 +1,79 @@
+/* contacts.css */
+
+.social {
+  text-align: center;
+  transition: 0.5s;
+
+}
+
+.social li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+}
+
+.social a {
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  transition: 0.5s;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: -2px -2px 10px rgba(255, 255, 255, 0.1), 2px 2px 10px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+}
+
+.social a:hover {
+  transform: translateY(-5px);
+  
+}
+
+.telegram:hover {
+  background-color: #2ca5e0;
+}
+
+.linkedin:hover {
+  background-color: #0077b5;
+}
+
+.instagram:hover {
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+
+.facebook:hover {
+  background-color: #1877f2;
+}
+
+.twitter:hover {
+  background-color: #1da1f2;
+}
+
+.github:hover {
+  background-color: #333333;
+}
+
+.contactText{
+  text-align: center;
+}
+
+.conatctTitle{
+  text-align: center;
+}
+
+.contact {
+  text-align: center;
+}
+
+.map-container {
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}

@@ -20,7 +20,9 @@ function SideMenu({ active, sectionActive }) {
   return (
     <div className={`sideMenu ${active ? 'active' : undefined}`}>
       <a href="#!" className="logo">
-        <img src={PlayGame} alt="" />
+        <div className="logo_in">
+          <img src={PlayGame} alt="" />
+        </div>
         <span className="brand">Play</span>
       </a>
       <ul className="nav">

@@ -21,7 +21,7 @@ function GameCard({ game }) {
   }
 
   return (
-    <div className="col-xl-3 col-lg-4 col-md-6">
+    <div className="col-xxl-3 col-xl-4 col-md-6">
       <div className="gameCard">
         <img src={game.img} alt={game.title} className="img-fluid" />
         <button
