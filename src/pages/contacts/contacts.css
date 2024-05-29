@@ -247,6 +247,7 @@ textarea {
   height: 120px; /* Увеличиваем размер фото */
   border-radius: 50%; /* Делаем фото круглым */
   margin: 0 auto; /* Центрируем фото */
+  display: block; /* Убираем лишние пробелы */
 }
 
 .review-content {
@@ -256,7 +257,6 @@ textarea {
 .review-text {
   font-size: 16px; /* Увеличиваем размер текста */
   line-height: 1.6; /* Увеличиваем высоту строки */
-  color: #333; /* Изменяем цвет текста */
   text-align: center;
 }
 
