@@ -111,25 +111,6 @@ function Contacts({ reference }) {
         <h2>Customer Reviews</h2>
 
 
-        <Slider {...settings}>
-            {reviews.map(review => (
-              <div key={review.id} className="review">
-                <img src={review.photo} alt={`Customer ${review.id}`} className="review-img" />
-                <div className="review-content">
-                  <p className="review-text">{review.text}</p>
-                  <div className="rating">
-                    {Array.from({ length: review.rating }, (_, index) => (
-                      <i key={index} className="bi bi-star-fill" style={{color: "yellow"}}></i>
-                    ))}
-                    {Array.from({ length: 5 - review.rating }, (_, index) => (
-                      <i key={index} className="bi bi-star"></i>
-                    ))}
-                  </div>
-                  <p className="review-author">{review.author}</p>
-                </div>
-              </div>
-            ))}
-          </Slider>
         
 
       </div>
