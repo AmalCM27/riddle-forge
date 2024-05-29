@@ -71,10 +71,13 @@
 }
 
 .map-container {
-  margin-top: 30px;
+  margin: 30px auto;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  /* Adjust width as needed */
+  max-width: 1000px;
 }
 
 .map::before {
@@ -90,22 +93,63 @@
   border: 0;
   border-radius: 10px;
   filter: grayscale(80%);
-  transition: filter 0.3s ease;
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 /* contacts.css */
 
 .form-container {
-  margin-top: 30px;
-  background: #152432;
+  margin: 30px auto;
   padding: 20px;
   border-radius: 10px;
+  background: #192938;
   box-shadow: 0 5px 15px rgb(255 241 241 / 30%);
+  width: 80%;
+  /* Adjust width as needed */
+  max-width: 600px;
+  /* Optional max-width for better control */
 }
 
+.form-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-container .input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background: #ffffff;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #0998a8;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  background: #087f90;
+}
+
+.form-container .input:focus {
+  outline: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 .map-container iframe:hover {
   filter: grayscale(0%);
+  transform: scale(1.05);
 }
 
 .form-group {
@@ -138,8 +182,6 @@ label {
   color: #fff;
 }
 
-input[type="text"],
-input[type="email"],
 textarea {
   width: 100%;
   padding: 10px;
