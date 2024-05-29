@@ -15,15 +15,15 @@ function Contacts({ reference }) {
           <form action={`mailto:azamatovamal5@gmail.com`} method="POST" encType="text/plain">
             <div className="form-group">
               <label htmlFor="name">Name:</label>
-              <input type="text" id="name" name="name" className="form-input" required />
+              <input type="text" id="name" name="name" className="form-input"  placeholder="Your Name" required />
             </div>
             <div className="form-group">
               <label htmlFor="email">Email:</label>
-              <input type="email" id="email" name="email" className="form-input" required />
+              <input type="email" id="email" name="email" className="form-input" placeholder="Your Email" equired />
             </div>
             <div className="form-group">
               <label htmlFor="message">Message:</label>
-              <textarea id="message" name="message" className="form-input" required></textarea>
+              <textarea id="message" name="message" className="form-input"  placeholder="Your Message"  required></textarea>
             </div>
             <button type="submit" className="submit-btn">Send</button>
           </form>
