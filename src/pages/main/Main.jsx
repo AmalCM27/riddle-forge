@@ -11,7 +11,7 @@ import About from '../about/About';
 import Contacts from '../contacts/Contacts';
 
 function Main() {
-  const { library, bag,  contacts, about } = useContext(AppContext)
+  const { library, bag, contacts, about } = useContext(AppContext)
   const [active, setActive] = useState(false);
   const [games, setGames] = useState([]);
 
@@ -73,6 +73,19 @@ function Main() {
 
   useEffect(() => {
     fetchData();
+  }, []);
+
+  const fetchDataa = () => {
+    fetch('https://riddle-forge.vercel.app/api/gamesData.json')
+      .then(res => res.json())
+      .then(data => {
+        setGames(data);
+      })
+      .catch(e => console.log(e.message));
+  };
+
+  useEffect(() => {
+    fetchDataa();
   }, []);
 
   return (
