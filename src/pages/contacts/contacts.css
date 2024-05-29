@@ -212,7 +212,7 @@ textarea {
   transform: translateY(-3px);
 }
 
-.[type="submit"] {
+[type="submit"] {
   padding: 10px 20px;
   background-color: #0998a8;
   color: #fff;
@@ -223,6 +223,21 @@ textarea {
   transition: background-color 0.3s;
 }
 
-.[type="submit"]:hover {
+[type="submit"]:hover {
   background-color: #0d171f;
+}
+
+.ConatactTextWithME {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+ 
+@media (max-width: 768px) {
+  .ConatactTextWithME {
+    font-size: 1rem;
+    max-width: 500px;
+  }
 }
