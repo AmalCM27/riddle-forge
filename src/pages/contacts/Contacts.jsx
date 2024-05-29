@@ -6,12 +6,13 @@ function Contacts({ reference }) {
     <section id="contact" className='contact' ref={reference}>
       <div className="container-fluid">
         <div className="row mb-3">
-          <h1>Contacts</h1>
+          <h1>Get in Touch</h1>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus natus labore, aut error quo autem sapiente consequuntur quasi sit quidem minus soluta illum veritatis sed unde laborum corrupti nobis adipisci.</p>
+        <p className="ConatactTextWithME" >Welcome to Riddle-Forge, your ultimate destination for the latest gaming releases and experiences! Have questions, feedback, or need assistance? Feel free to reach out to us. Our dedicated team is here to help you navigate through the world of gaming.</p>
       </div>
       <div className="form-container">
       <h2>Contact Us</h2>
+      <p className="ConatactTextWithME">Use the form below to send us a message, and we'll get back to you as soon as possible. We look forward to hearing from you!</p>
           <form action={`mailto:azamatovamal5@gmail.com`} method="POST" encType="text/plain">
             <div className="form-group">
               <label htmlFor="name">Name:</label>
@@ -29,6 +30,7 @@ function Contacts({ reference }) {
           </form>
         </div>
         <div className="map-container">
+          <p className="ConatactTextWithME" >Explore our physical location on the map below to find us easily. Whether you're a local or visiting from afar, we're excited to welcome you to Riddle-Forge!</p>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19047.59400981204!2d78.37927429999999!3d42.491178499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38859a0e2b3b14c7%3A0x400ad50862bc000!2sKarakol%2C%20Kyrgyzstan!5e0!3m2!1sen!2s!4v1625647260427!5m2!1sen!2s"
           width="600"
@@ -39,6 +41,7 @@ function Contacts({ reference }) {
         ></iframe>
       </div>
       <ul className="social">
+        <p className="ConatactTextWithME" >Connect with us on social media to stay updated on the newest game releases, promotions, and community events. Join our gaming community and be part of the conversation!</p>
         <li>
           <a href="https://t.me/But4e_r" className="telegram" target='_blank'>
             <i className="bi bi-telegram"></i>
