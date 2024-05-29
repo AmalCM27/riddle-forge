@@ -36,7 +36,7 @@ function GameSwiper({ games }) {
       }}
       autoplay={{ 
         delay: 3500,
-        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       }}
       modules={[EffectCoverflow, Navigation, Autoplay]}
       className='gameSwiper'

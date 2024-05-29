@@ -12,6 +12,12 @@
   transition: 1s;
 }
 
+@media screen and (max-width: 1245px) {
+  .sideMenu{
+    width: 38%;
+  }
+}
+
 .logo {
   font-family: 'Bauhaus 93', sans-serif;
   position: relative;
@@ -119,7 +125,7 @@
  
 .brand{
   width: 50%;
-  font-size: 34px;
+  font-size: 48px;
 }
 .logo_in{
   width: 50%;
@@ -127,6 +133,12 @@
 }
 .logo_in img{
   display: block;
-  width: 100%;
+  /* width: 100%; */
   height: auto;
+}
+
+@media screen and (max-width: 1555px) {
+  .brand {
+    display: none;
+  }
 }

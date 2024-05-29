@@ -218,7 +218,6 @@ textarea {
   color: #fff;
   border: none;
   border-radius: 5px;
-  margin-top: ;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -233,6 +232,7 @@ textarea {
   text-align: center;
   margin: 0 auto;
   max-width: 800px;
+  margin-bottom: 33px;
 }
  
 @media (max-width: 768px) {
@@ -243,11 +243,11 @@ textarea {
 }
 
 .review-img {
-  width: 120px; /* Увеличиваем размер фото */
-  height: 120px; /* Увеличиваем размер фото */
-  border-radius: 50%; /* Делаем фото круглым */
-  margin: 0 auto; /* Центрируем фото */
-  display: block; /* Убираем лишние пробелы */
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Добавляем тень */
 }
 
 .review-content {
@@ -255,8 +255,8 @@ textarea {
 }
 
 .review-text {
-  font-size: 16px; /* Увеличиваем размер текста */
-  line-height: 1.6; /* Увеличиваем высоту строки */
+  font-size: 16px;
+  line-height: 1.6;
   text-align: center;
 }
 
@@ -266,4 +266,110 @@ textarea {
   text-align: center;
 }
 
+.rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.rating i {
+  margin: 0 2px;
+  font-size: 20px;
+  color: #f39c12; /* Цвет звезд */
+}
+
+.review {
+  background-color: #131e27;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
  
+/* Добавляем стили для слайдера */
+.slider-container {
+  width: 80%; /* Ширина контейнера со слайдером */
+  margin: 0 auto; /* Центрирование слайдера */
+}
+
+.slick-slider {
+  position: relative;
+
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Высота слайда */
+  outline: none;
+}
+.slick-dots {
+  position: absolute;
+  bottom: 20px; /* Расположение точек снизу */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.slick-dots li {
+  margin: 0 5px; /* Отступ между точками */
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 20px; /* Расположение точек снизу */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.slick-dots li {
+  margin: 0 5px; /* Отступ между точками */
+}
+
+.slick-dots button {
+  width: 12px; /* Ширина точки */
+  height: 12px; /* Высота точки */
+  border: none;
+  border-radius: 50%; 
+  background-color: #f39c12; /* Цвет точки */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slick-dots button:hover {
+  background-color: #e67e22; /* Цвет точки при наведении */
+}
+
+.slick-dots .slick-active button {
+  background-color: #f1c40f; /* Цвет активной точки */
+}
