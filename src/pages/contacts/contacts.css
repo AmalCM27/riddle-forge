@@ -241,3 +241,29 @@ textarea {
     max-width: 500px;
   }
 }
+
+.review-img {
+  width: 120px; /* Увеличиваем размер фото */
+  height: 120px; /* Увеличиваем размер фото */
+  border-radius: 50%; /* Делаем фото круглым */
+  margin: 0 auto; /* Центрируем фото */
+}
+
+.review-content {
+  padding: 20px;
+}
+
+.review-text {
+  font-size: 16px; /* Увеличиваем размер текста */
+  line-height: 1.6; /* Увеличиваем высоту строки */
+  color: #333; /* Изменяем цвет текста */
+  text-align: center;
+}
+
+.review-author {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+ 
