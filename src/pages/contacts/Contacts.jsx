@@ -1,7 +1,6 @@
 import React from 'react';
 import './contacts.css';
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick-theme.css';
 
 
 
