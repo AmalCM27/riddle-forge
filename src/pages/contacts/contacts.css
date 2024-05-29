@@ -1,9 +1,10 @@
 /* contacts.css */
 
 .social {
+  list-style: none;
+  padding: 0;
   text-align: center;
-  transition: 0.5s;
-
+  margin-top: 20px;
 }
 
 .social li {
@@ -11,7 +12,6 @@
   display: inline-block;
   margin: 0 20px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  
 }
 
 .social a {
@@ -29,7 +29,7 @@
 
 .social a:hover {
   transform: translateY(-5px);
-  
+
 }
 
 .telegram:hover {
@@ -42,8 +42,8 @@
 
 .instagram:hover {
   background: #d6249f;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
 }
 
 .facebook:hover {
@@ -58,11 +58,11 @@
   background-color: #333333;
 }
 
-.contactText{
+.contactText {
   text-align: center;
 }
 
-.conatctTitle{
+.conatctTitle {
   text-align: center;
 }
 
@@ -71,9 +71,116 @@
 }
 
 .map-container {
-  max-width: 600px;
-  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 10px;
   overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.map::before {
+  content: '';
+  display: block;
+  padding-top: 75%;
+  /* Это соотношение сторон 4:3 для ширины 100% */
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+  border-radius: 10px;
+  filter: grayscale(80%);
+  transition: filter 0.3s ease;
+}
+
+/* contacts.css */
+
+.form-container {
+  margin-top: 30px;
+  background: #152432;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgb(255 241 241 / 30%);
+}
+
+
+.map-container iframe:hover {
+  filter: grayscale(0%);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #0998a8;
+  box-shadow: 0 0 10px rgba(9, 152, 168, 0.5);
+}
+
+textarea.form-input {
+  height: 150px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+textarea {
+  height: 150px;
+}
+
+.submit-btn {
+  padding: 15px 30px;
+  background-color: #0998a8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.submit-btn:hover {
+  background-color: #0d171f;
+  transform: translateY(-3px);
+}
+
+.[type="submit"] {
+  padding: 10px 20px;
+  background-color: #0998a8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: ;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.[type="submit"]:hover {
+  background-color: #0d171f;
 }
