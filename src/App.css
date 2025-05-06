@@ -29,4 +29,22 @@ body {
   height: 100%;
   min-width: 100vh;
   overflow: auto;
+  cursor: url(../src/minecraft-knight/steve_2.png), auto;
 }
+
+button, 
+button:hover, 
+button:active, 
+button:focus,
+span,
+a {
+    cursor: url(../src/minecraft-knight/steve_2.png), auto;
+}
+
+button:active {
+  transform: scale(0.9); /* Уменьшение на 10% при клике */
+  transition: transform 0.1s ease;
+}
+
+
+ 

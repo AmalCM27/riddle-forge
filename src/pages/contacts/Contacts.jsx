@@ -1,42 +1,46 @@
 import React from 'react';
+import Slider from 'react-slick';
 import './contacts.css';
-
-
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 function Contacts({ reference }) {
-  // Отзывы клиентов
   const reviews = [
     {
       id: 1,
       author: 'Elon Musk',
       text: "Riddle-Forge offers an unparalleled gaming experience. The selection is vast, the service is top-notch, and the team behind it is truly dedicated to enhancing the gaming community. Highly recommended!",
       rating: 5,
-      photo: "https://inst.eecs.berkeley.edu/~cs194-26/fa20/upload/files/proj3/cs194-26-afp/elon.jpg"
+      photo: require('../contacts/otzuvy/elon_musk.jpg'),
     },
     {
       id: 2,
       author: 'Mark Zuckerberg',
       text: "Riddle-Forge offers an unparalleled gaming experience. With its expansive game selection and seamless user interface, it's a testament to innovation in the gaming industry. A definite must for any avid gamer!",
       rating: 4,
-      photo: 'https://i.guim.co.uk/img/media/f9ea33edca9b75c81444946e6afc11dad541e228/0_0_3094_1857/master/3094.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=96677342cb72e720f81c8a6e7167ccfd', // Пример URL изображения
+      photo: require('../contacts/otzuvy/Mark.jpg'),
     },
     {
       id: 3,
-      author: 'Notch',
-      text: "Riddle-Forge is like redstone for gamers, allowing them to craft their own unique experiences. Its endless possibilities and creative community make it a true diamond in the rough of gaming platforms.",
+      author: 'Tynchtyk ava',
+      text: "Amal Azamatov's work on Riddle-Forge demonstrates his outstanding web development skills, delivering a unique, user-friendly, and engaging gaming platform.",
       rating: 5,
-      photo: 'https://nationaltoday.com/wp-content/uploads/2022/10/456841111-min.jpg', // Пример URL изображения
+      photo: require('../contacts/otzuvy/Tynchtyk_ava.jpg'),
     },
   ];
 
-  const settings = {
+  const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    fade: true, // Добавить эффект плавного перехода
+    cssEase: 'linear', // Настроить анимацию перехода
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true
   };
-  
 
   return (
     <section id="contact" className='contact' ref={reference}>
@@ -103,19 +107,34 @@ function Contacts({ reference }) {
             </a>
           </li>
           <li>
-            <a href="https://github.com/AmalCM27" className="github" target='_blank'>
+            <a href="https://github.com/AmalCM27" className="github"  target='_blank'>
               <i className="bi bi-github"></i>
             </a>
           </li>
         </ul>
         <h2>Customer Reviews</h2>
-
-
-        
-
+        <Slider {...sliderSettings}>
+          {reviews.map(review => (
+            <div key={review.id} className="review">
+              <img src={review.photo} alt={`Customer ${review.id}`} className="review-img" />
+              <div className="review-content">
+                <p className="review-text">{review.text}</p>
+                <div className="rating">
+                  {Array.from({ length: review.rating }, (_, index) => (
+                    <i key={index} className="bi bi-star-fill" style={{ color: "yellow" }}></i>
+                  ))}
+                  {Array.from({ length: 5 - review.rating }, (_, index) => (
+                    <i key={index} className="bi bi-star"></i>
+                  ))}
+                </div>
+                <p className="review-author">{review.author}</p>
+              </div>
+            </div>
+          ))}
+        </Slider>
       </div>
     </section>
   );
 }
 
-export default Contacts
+export default Contacts;
