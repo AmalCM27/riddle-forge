@@ -11,7 +11,7 @@ function Contacts({ reference }) {
       author: 'Elon Musk',
       text: "Riddle-Forge offers an unparalleled gaming experience. The selection is vast, the service is top-notch, and the team behind it is truly dedicated to enhancing the gaming community. Highly recommended!",
       rating: 5,
-      photo: require('../contacts/otzuvy/elon_musk.jpg'),
+      photo: require('../contacts/otzuvy/elon.jpg'),
     },
     {
       id: 2,
